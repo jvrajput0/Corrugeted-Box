@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Product add</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js"></script>
+</head>
+
+<body>
+    <div id="productGetDetails">
+        <div class="detailGet">
+
+            <div>
+                Enter Box Size : <br>
+                <input type="text" name="f_boxsize" id="f_boxsize"> X
+                <input type="text" name="s_boxsize" id="s_boxsize"> X
+                <input type="text" name="t_boxsize" id="t_boxsize">
+
+            </div>
+            <br>
+
+            <div>
+                Enter Ply Details : <br>
+                <input type="radio" id="3ply" value="3" name="plySize" class="plySizeCheck"> <label for="3ply">3
+                    Ply</label>
+
+                <input type="radio" id="5ply" value="5" name="plySize" class="plySizeCheck"> <label for="5ply">5
+                    Ply</label>
+
+            </div>
+            <br>
+
+
+            <div>
+                Enter Pack Of Box : <br>
+                <input type="radio" id="25" value="25" name="packOf" class="packOfCheck"> <label for="25">25</label>
+                <input type="radio" id="50" value="50" name="packOf" class="packOfCheck"> <label for="50">50</label>
+                <input type="radio" id="100" value="100" name="packOf" class="packOfCheck"> <label for="100">100</label>
+                <input type="radio" id="200" value="200" name="packOf" class="packOfCheck"> <label for="200">200</label>
+            </div>
+
+            <br>
+            <button id="submit" onclick="onclickCal()">Apply</button>
+
+        </div>
+
+
+        <div id="productView">
+
+            <div class="buttonHead">
+                <div id="ProductDetails" onclick="ProductDetails()">Product Details</div>
+                <div id="Offers" onclick="Offers()">Offers</div>
+                <div id="SafetyCompliance" onclick="SafetyCompliance()">Safety & Compliance</div>
+            </div>
+
+
+            <div class="ProductDetails">
+                <div class="details">
+                    <div class="headingDetails">
+                        <b>
+                            Product Description :
+                        </b>
+                    </div>
+                    <div class="dataDetails">
+                        The Grow Packing Solution offers a <span class="fbox"></span> x <span class="sbox"></span> x
+                        <span class="tbox"></span> inches corrugated cardboard <span class="plySize"></span> ply box
+                        designed for versatile purposes, including packing, moving, shipping, and gifting. This pack
+                        contains <span class="packOf"></span> brown boxes, made to cater to both personal and business
+                        needs. Each box is crafted from durable, high-quality corrugated cardboard material, ensuring
+                        the safety and security of the items inside during transit. The compact size of the boxes makes
+                        them ideal for shipping small items, while their sturdy construction can withstand the rigors of
+                        moving. Whether for ecommerce businesses, gift packaging, or general moving purposes, the Grow
+                        Packing Solution's pack of <span class="packOf"></span> provides a reliable and efficient
+                        packaging option.
+                    </div>
+                </div>
+
+                <div class="details">
+                    <div class="headingDetails">
+                        <b>
+                            Bullet Point :
+                        </b>
+                    </div>
+                    <ul class="dataDetails">
+                        <li>Durable, corrugated construction: Protects contents from bumps, shocks, and vibrations
+                            during shipping and storage.</li>
+                        <li>Stackable design: Withstands heavy weight without crushing for efficient storage.</li>
+                        <li>Customizable for fragile items: Add interior padding or inserts for extra protection.</li>
+                        <li>Lightweight for reduced shipping costs: Saves money on freight without compromising on
+                            protection.</li>
+                        <li>Economical packaging solution: Affordable option for various shipping needs.</li>
+                        <li>Fast and easy assembly: Saves time and labor costs compared to complex packaging.</li>
+                        <li>Made from recycled materials: Environmentally friendly choice for eco-conscious businesses.
+                        </li>
+                        <li>100% recyclable: Can be easily recycled after use, minimizing waste.</li>
+                        <li>Biodegradable: Breaks down naturally after disposal, reducing landfill impact.</li>
+                        <li>Easy to handle and store: Lightweight and flat-packed for convenient storage and
+                            transportation.</li>
+                    </ul>
+                </div>
+
+                <div class="details">
+                    <div class="headingDetails">
+                        <b>
+                            Item Name :
+                        </b>
+                    </div>
+                    <div class="dataDetails">
+                        Grow Packing Solution <span class="fbox"></span> x <span class="sbox"></span> x <span
+                            class="tbox"></span> Inches <span class="plySize"></span> ply Cartoon Box For Packing,
+                        Moving, Shipping, Gifting, Multi Propose Use Brown Pack of <span class="packOf"></span>.
+                    </div>
+                </div>
+
+                <div class="details">
+                    <div class="headingDetails">
+                        <b>
+                            Item Dimensions :
+                        </b>
+                    </div>
+                    <div class="dataDetails">
+                        <div><span class="fboxCM"></span> CM</div>
+                        <div><span class="sboxCM"></span> CM</div>
+                        <div><span class="tboxCM"></span> CM</div>
+                    </div>
+                </div>
+
+                <div class="details">
+                    <div class="headingDetails">
+                        <b>
+                            Color :
+                        </b>
+                    </div>
+                    <div class="dataDetails">
+                        Brown
+                    </div>
+                </div>
+
+                <div class="details">
+                    <div class="headingDetails">
+                        <b>
+                            Number of Boxes :
+                        </b>
+                    </div>
+                    <div class="dataDetails">
+                        <span class="packOf"></span>
+                    </div>
+                </div>
+
+                <div class="details">
+                    <div class="headingDetails">
+                        <b>
+                            Number of Items :
+                        </b>
+                    </div>
+                    <div class="dataDetails">
+                        <span class="packOf"></span>
+                    </div>
+                </div>
+
+                <div class="details">
+                    <div class="headingDetails">
+                        <b>
+                            Package Dimensions :
+                        </b>
+                    </div>
+                    <div class="dataDetails">
+                        <div><span class="fboxCM"></span> CM</div>
+                        <div><span class="sboxCM"></span> CM</div>
+                        <div><span class="tboxCM"></span> CM</div>
+                    </div>
+                </div>
+
+                <div class="details">
+                    <div class="headingDetails">
+                        <b>
+                            Package Weight :
+                        </b>
+                    </div>
+                    <div class="dataDetails">
+                        200 GR
+                    </div>
+                </div>
+
+                <div class="details">
+                    <div class="headingDetails">
+                        <b>
+                            Unit Count :
+                        </b>
+                    </div>
+                    <div class="dataDetails">
+                        <span class="packOf"></span>
+                    </div>
+                </div>
+
+                <div class="details">
+                    <div class="headingDetails">
+                        <b>
+                            Unit Count Type :
+                        </b>
+                    </div>
+                    <div class="dataDetails">
+                        Count
+                    </div>
+                </div>
+
+                <div class="details">
+                    <div class="headingDetails">
+                        <b>
+                            Item Type Name :
+                        </b>
+                    </div>
+                    <div class="dataDetails">
+                        Box
+                    </div>
+                </div>
+
+                <div class="details">
+                    <div class="headingDetails">
+                        <b>
+                            Number of Pieces :
+                        </b>
+                    </div>
+                    <div class="dataDetails">
+                        <span class="packOf"></span>
+                    </div>
+                </div>
+
+                <div class="details">
+                    <div class="headingDetails">
+                        <b>
+                            Item Dimensions L x W x H :
+                        </b>
+                    </div>
+                    <div class="dataDetails">
+                        <div><span class="fboxCM"></span> CM</div>
+                        <div><span class="sboxCM"></span> CM</div>
+                        <div><span class="tboxCM"></span> CM</div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="Offers">
+                <div class="details">
+                    <div class="headingDetails">
+                        <b>
+                            Seller SKU :
+                        </b>
+                    </div>
+                    <div class="dataDetails">
+                        CB <span class="fbox"></span>x<span class="sbox"></span>x<span class="tbox"></span> <span
+                            class="plySize"></span>ply <span class="packOf"></span>
+                    </div>
+                </div>
+
+                <div class="details">
+                    <div class="headingDetails">
+                        <b>
+                            Country/Region Of Origin :
+                        </b>
+                    </div>
+                    <div class="dataDetails">
+                        India
+                    </div>
+                </div>
+
+
+                <div class="details">
+                    <div class="headingDetails">
+                        <b>
+                            Product Tax Code :
+                        </b>
+                    </div>
+                    <div class="dataDetails">
+                        A_GEN_STANDARD
+                    </div>
+                </div>
+
+                <div class="details">
+                    <div class="headingDetails">
+                        <b>
+                            Your price :
+                        </b>
+                    </div>
+                    <div class="dataDetails">
+                        Enter a selling Price
+                    </div>
+                </div>
+
+                <div class="details">
+                    <div class="headingDetails">
+                        <b>
+                            List price :
+                        </b>
+                    </div>
+                    <div class="dataDetails">
+                        Enter a MRP
+                    </div>
+                </div>
+
+                <div class="details">
+                    <div class="headingDetails">
+                        <b>
+                            Quantity :
+                        </b>
+                    </div>
+                    <div class="dataDetails">
+                        50
+                    </div>
+                </div>
+
+                <div class="details">
+                    <div class="headingDetails">
+                        <b>
+                            Item Condition :
+                        </b>
+                    </div>
+                    <div class="dataDetails">
+                        New
+                    </div>
+                </div>
+
+                <div class="details">
+                    <div class="headingDetails">
+                        <b>
+                            Max Order Quantity :
+                        </b>
+                    </div>
+                    <div class="dataDetails">
+                        50
+                    </div>
+                </div>
+
+                <div class="details">
+                    <div class="headingDetails">
+                        <b>
+                            HSN Code :
+                        </b>
+                    </div>
+                    <div class="dataDetails">
+                        48191010
+                    </div>
+                </div>
+                <div class="details">
+                    <div class="headingDetails">
+                        <b>
+                            Maximum Retail Price :
+                        </b>
+                    </div>
+                    <div class="dataDetails">
+                        Enter a MRP
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="SafetyCompliance">
+                <div class="details">
+                    <div class="headingDetails">
+                        <b>
+                            Manufacturer :
+                        </b>
+                    </div>
+                    <div class="dataDetails">
+                        Grow Packing Solution, India
+                    </div>
+                </div>
+
+                <div class="details">
+                    <div class="headingDetails">
+                        <b>
+                            Manufacturer Contact :
+                        </b>
+                    </div>
+                    <div class="dataDetails">
+                        Grow Packing Solution, India
+                    </div>
+                </div>
+
+                <div class="details">
+                    <div class="headingDetails">
+                        <b>
+                            Packer :
+                        </b>
+                    </div>
+                    <div class="dataDetails">
+                        Grow Packing Solution, India
+                    </div>
+                </div>
+
+
+
+
+            </div>
+
+        </div>
+
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
+
+
+
+
+input[type=text]{
+    width: 50px;
+    height: 20px;
+}   
+
+label{
+    margin-right: 20px;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lexend Deca", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+#productGetDetails{
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.detailGet{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+#submit{
+    padding: 5px 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+#productView #heading{
+    background-color: burlywood;
+    text-align: center;
+    font-size: 26px;
+    padding: 20px;
+}
+.details{
+    padding: 20PX;
+    display: grid;
+    grid-template-columns: 250PX auto;
+    align-items: start;
+    justify-content: start;
+}
+.details:nth-child(odd){
+    background-color: #f2f2f2;
+}
+.buttonHead{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    align-items: center;
+    justify-content: center;
+    margin: 15px 0;
+}
+.buttonHead div{
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    background-color: #cbcbcb;
+    border: 1px solid #817e7e;
+    cursor: pointer;
+}
+.buttonHead div.active{
+    background-color: #e85050;
+
+}
+#productView,
+.ProductDetails,
+.Offers,
+.SafetyCompliance{
+    display: none;
+}
